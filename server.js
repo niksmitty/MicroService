@@ -10,10 +10,10 @@ const googleSearch = new GoogleSearch({
 
 const app = express();
 
-const port = 8000;
+const PORT = process.env.PORT || 8000;
 
 require('./app/routes')(app, googleSearch);
 
-app.listen(port, () => {
-  console.log('We\'re live on ' + port );
+app.listen(PORT, () => {
+  console.log(`We\'re live on ${ PORT } `);
 });
