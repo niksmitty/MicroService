@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const config = require('./config.json');
 
@@ -9,6 +10,7 @@ const googleSearch = new GoogleSearch({
 });
 
 const app = express();
+app.use(cors());
 
 const PORT = process.env.PORT || 8000;
 

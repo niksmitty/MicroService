@@ -9,7 +9,7 @@ module.exports = function(app, gs) {
       if (response.hasOwnProperty('items')) {
         items = response['items'];
       } else {
-        res.send('Items are missing...');
+        return res.send('Items are missing...');
       }
       if (items !== 'undefined' && items.length > 0) {
         let firstItem = items[0];
