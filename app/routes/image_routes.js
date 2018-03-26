@@ -16,6 +16,7 @@ module.exports = function(app, gs) {
         let firstItem = items[0];
         if (items[0].hasOwnProperty('link')) {
           if (responseType === 'image') {
+            res.type('svg+xml');
             res.send(`<svg width="100%" height="100%" 
                     xmlns="http://www.w3.org/2000/svg" 
                     xmlns:xlink="http://www.w3.org/1999/xlink">       
